@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Product</title>
+    <link href="~/css/addproduct.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="form-wrapper">
+        <h2>Update Product</h2>
+        <form action="/addproduct/update" method="POST">
+
+
+            <div class="form-group">
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product_name" placeholder="Enter product name" required>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="product-description">Product Description</label>
+                <textarea id="product-description" name="product_description" rows="4" placeholder="Describe your product" required></textarea>
+            </div>
+
+            <button type="submit">Update Product</button>
+        </form>
+    </div>
+</body>
+</html>

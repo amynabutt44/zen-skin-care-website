@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <style>
+        /* Container Styling */
+        .cart-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(to right, #f8f8f8, #e8e8e8);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+            /* Header Styling */
+            .cart-container h1 {
+                text-align: center;
+                font-size: 32px;
+                color: #333;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+        /* Cart Item Layout */
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Individual Cart Item */
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Product Information */
+        .product-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 60px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+            .product-image:hover {
+                transform: scale(1.1); /* Zoom effect on hover */
+            }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Product Quantity Input */
+        .product-quantity {
+            width: 50px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+            .product-quantity:hover {
+                border-color: #666; /* Change border color on hover */
+            }
+
+        /* Product Price */
+        .product-price {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Remove Button */
+        .remove-item {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .remove-item:hover {
+                background-color: #d63333; /* Darker red on hover */
+            }
+
+        /* Cart Summary Section */
+        .cart-summary {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+            .cart-summary p {
+                font-size: 16px;
+                color: #333;
+            }
+
+        /* Checkout Button */
+        .checkout-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .checkout-button:hover {
+                background-color: #388E3C; /* Darker green on hover */
+            }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+
+        <!-- Cart Items -->
+        <div class="cart-items">
+            <!-- Cart Item -->
+            <div class="cart-item">
+                <div class="product-info">
+                    <img src="~/img/cloud jelly serum.jpg" alt="Product Image" class="product-image">
+                    <span class="product-name">Cool Gadget</span>
+                </div>
+
+                <input type="number" min="1" value="1" class="product-quantity">
+
+                <span class="product-price">$19.99</span>
+
+                <button class="remove-item">Remove</button>
+            </div>
+
+            <!-- Additional Cart Items -->
+            <!-- Add more cart items in a similar format -->
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <p>Subtotal: $19.99</p>
+            <p>Tax: $1.60</p>
+            <p>Total: $21.59</p>
+            <a href="/Home/checkout" style="
+                display: inline-block;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                text-align: center;
+            " class="checkout-button">Proceed to Checkout</a>
+        </div>
+    </div>
+</body>
+</html>

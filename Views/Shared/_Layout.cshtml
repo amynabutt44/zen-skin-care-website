@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Skin Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="~/css/catagory.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand zen-name" href="/Home/Index" style="font-weight: bold;">ZEN SKIN CARE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index" style="font-weight: bold;">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: bold;">
+                            PRODUCTS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/product/hairs" style="font-weight: bold;">Hair Products</a>
+                            <a class="dropdown-item" href="/product/eyecream" style="font-weight: bold;">Eye Creams</a>
+                            <a class="dropdown-item" href="/product/serums" style="font-weight: bold;">Serums</a>
+                            <a class="dropdown-item" href="/product/sunblock" style="font-weight: bold;">Sun Blocks</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#NEW-ARRIVAL" style="font-weight: bold;">New Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sale" style="font-weight: bold;">Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/addtocart" style="font-weight: bold;">Cart</a>
+                    </li>
+                    <li>
+                        <partial name="_LoginPartial" />
+                    </li>
+                   @*  <li class="nav-item">
+                        <a class="nav-link" href="/Identity/Account/Login" style="font-weight: bold;">login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Identity/Account/Register" style="font-weight: bold;">register</a>
+                    </li> *@
+                </ul>
+              
+                
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody();
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 footer-brand" style="font-weight: bold;">Zen Skin Care</div>
+            </div>
+            <div class="row">
+                <div class="col-12 footer-slogan" style="font-weight: bold;">YOUR BEAUTY MATTERS</div>
+            </div>
+            <div class="row footer-links justify-content-center">
+                <div class="col-auto"><a href="/Home/refundpolicy" class="footer-link" style="font-weight: bold;">Refund Policy</a></div>
+                <div class="col-auto"><a href="/Home/contactUs" class="footer-link" style="font-weight: bold;">Contact Us</a></div>
+                <div col-auto><a href="/Home/aboutUs" class="footer-link" style="font-weight: bold;">About Us</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Skin Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-c29+4Gsp8uofnJcOD7rFSqNIsxHzF+x3Xdr8aVs0pbOaAsAuHb7T6yIVZErLhb72a8mZdCmNtQeLu0lAdw36Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/css/catagory.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-c29+4Gsp8uofnJcOD7rFSqNIsxHzF+x3Xdr8aVs0pbOaAsAuHb7T6yIVZErLhb72a8mZdCmNtQeLu0lAdw36Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light  website-name">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="zen-name" href="/Home/Index">ZEN SKIN CARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shop by Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/product/hairs">Hair Products</a>
+                            <a class="dropdown-item" href="/product/eyecream">Eye Creams</a>
+                            <a class="dropdown-item" href="/product/serums">Serums</a>
+                            <a class="dropdown-item" href="/product/sunblock">Sun Blocks</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    @* <nav class="navbar navbar-expand-lg navbar-light fixed-top website-name">
+    <div class="container">
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+    <a class="zen-name" href="/Home/Index">ZEN SKIN CARE</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/Home/Index">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Shop by Category
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="/product/hairs">Hair Products</a>
+    <a class="dropdown-item" href="/product/eyecream">Eye Creams</a>
+    <a class="dropdown-item" href="/product/serums">Serums</a>
+    <a class="dropdown-item" href="/product/sunblock">Sun Blocks</a>
+    </div>
+    </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="/user/login">Login</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    *@
+
+
+
+    <div>
+        @RenderBody();
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 footer-brand">Zen Skin Care</div>
+            </div>
+            <div class="row">
+                <div class="col-12 footer-slogan">YOUR BEAUTY MATTERS</div>
+            </div>
+            <div class="row footer-links justify-content-center">
+                <div class="col-auto"><a href="/Home/refundpolicy" class="footer-link">Refund Policy</a></div>
+                <div class="col-auto"><a href="/Home/contactUs" class="footer-link">Contact Us</a></div>
+                <div class="col-auto"><a href="/Home/aboutUs" class="footer-link">About Us</a></div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

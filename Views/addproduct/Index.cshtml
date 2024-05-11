@@ -1,0 +1,78 @@
+﻿@model List<products>
+
+@{
+    Layout = "_product_layout";
+}
+
+<div class="container shop-category  mt-4" id="sale">
+    <p class="display-6 shop-name text-center">SERUMS</p>
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-12 col-lg-3 col-xxl-3 col-xl-3 col-md-6 col-sm-12">
+                <div class="product-item text-center">
+                    <!-- Product Image with correct modal target -->
+                    <img src="~/img/DE LESH SUN BLOCK.jpg"
+                         alt="@product.name"
+                         class="img-fluid"
+                         style="height: 200px; object-fit: cover; object-position: center;"
+                         data-bs-toggle="modal"
+                         data-bs-target="#productModal@product.Id" />
+
+                    <!-- Product Details -->
+                    <div class="product-details mt-2">
+                        <div class="product-name">@product.name</div>
+                        <div class="product-price">$@product.price</div>
+
+                        <!-- Add to Cart Button -->
+                        <button class="btn btn-primary add-to-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                        </button>
+
+                        <!-- Quick View Button with correct modal target -->
+                        <button class="btn btn-info add-to-cart" data-bs-toggle="modal" data-bs-target="#productModal1">Quick View</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Product Modals for Quick View -->
+@foreach (var product in Model)
+{
+    <div class="modal fade" id="productModal@product.Id" tabindex="-1" aria-labelledby="productModalLabel@product.Id" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel@product.Id">@product.name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="~/img/DE LESH SUN BLOCK.jpg"
+                                 alt="@product.name"
+                                 class="img-fluid"
+                                 style="height: 300px; object-fit: cover; object-position: center;" />
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Display Product Description -->
+                            <p>@product.description</p>
+                            <p><strong>Price:</strong> $@product.price</p>
+
+                            <!-- Add to Cart Button in the Modal -->
+                            <button class="btn btn-primary add-to-cart">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
